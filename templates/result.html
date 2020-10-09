@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+<hr>
+<form action="{{url_for('home')}}"
+{% if pred==0 %}
+    <h4 style="color:red;align:center">Fake News</h4>
+{% else %}
+    <h4 style="color:green;align:center">Real News</h4>
+<hr>
+<button type="submit" class="btn btn-block btn-lg btn-primary">Back</button>
+</form>
+<hr>
+{% endif %}
+{% endblock %}
